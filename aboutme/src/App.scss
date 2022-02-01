@@ -1,3 +1,57 @@
+$mat-custom: (
+  text-primary-color: red,
+  text-secondary-color: blue,
+  liner-grad: (
+    -225deg,
+    #231557 0%,
+    #44107a 29%,
+    #ff1361 67%,
+    #fff800 100%,
+  ),
+);
+
+@mixin transform {
+  animation: spin 12s infinite;
+}
+
+@keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+    -ms-transform: rotate(180deg);
+    transform: rotateZ(0);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    transform: rotateZ(360deg);
+  }
+}
+
 .app-text {
-  color: red;
+  color: map-get($map: $mat-custom, $key: 'text-secondary-color');
+  @include transform;
+}
+.app-text-2 {
+  color: map-get($map: $mat-custom, $key: 'text-primary-color');
+  text-transform: uppercase;
+  background-image: linear-gradient(
+    map-get($map: $mat-custom, $key: 'liner-grad')
+  );
+  background-size: auto auto;
+  background-clip: border-box;
+  background-size: 200% auto;
+  color: #fff;
+  background-clip: text;
+  //text-fill-color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: textclip 2s linear infinite;
+  display: inline-block;
+  font-size: 190px;
+}
+
+@keyframes textclip {
+  to {
+    background-position: 200% center;
+  }
 }

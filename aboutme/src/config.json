@@ -1,0 +1,15 @@
+{
+    "config":{
+    "version":1,
+    "settings":{
+        "lang":"english",
+        "color":{
+            "palette":[
+                {
+                  "text-primary-color":"red"  
+                }
+            ]
+        }
+    }
+}
+}
