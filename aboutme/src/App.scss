@@ -5,6 +5,10 @@ $theme-1: (
     'L0': white,
     'L1': rgba(255, 255, 255, 0.8),
   ),
+  'tray': (
+    'brand-blue': #1f80e0,
+    'brand-white': #fff,
+  ),
 );
 
 $mat-custom: (
@@ -66,3 +70,7 @@ $mat-custom: (
     background-position: 200% center;
   }
 }
+
+// :export {
+//   mytheme: $theme-1;
+// }

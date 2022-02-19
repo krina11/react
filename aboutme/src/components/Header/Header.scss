@@ -1,8 +1,11 @@
 @import '../../App.scss';
+.header-wrapper {
+  display: flexbox;
+  justify-content: space-around;
+}
 .header {
   display: flex;
   background: linear-gradient(to bottom, #192133, #111826);
-  justify-content: center;
   text-align: center;
   align-items: center;
   padding: 8.5px 16px;
@@ -21,4 +24,8 @@
   li.menu-item:hover {
     color: map-get(map-get($theme-1, 'text'), 'L0');
   }
+}
+.header-items {
+  display: flex;
+  justify-content: space-around;
 }
