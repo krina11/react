@@ -1,6 +1,4 @@
-$mat-custom: (
-  text-primary-color: red,
-  text-secondary-color: blue,
+$theme-1: (
   liner-grad: (
     -225deg,
     #231557 0%,
@@ -8,7 +6,16 @@ $mat-custom: (
     #ff1361 67%,
     #fff800 100%,
   ),
+  liner-grad: linear-gradient(to bottom, #192133, #111826),
+  $text: (
+    primary: white,
+    dark: black,
+  ),
 );
+
+@if expr {
+} @else {
+}
 
 @mixin transform {
   animation: spin 12s infinite;
