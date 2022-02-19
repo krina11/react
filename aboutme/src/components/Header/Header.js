@@ -5,19 +5,20 @@ import './Header.scss'
 import Menu from '../Menu/Menu'
 import Logo from '../Logo/Logo'
 
-import { ThemeProvider } from '@material-ui/styles';
-import theme from '../../theme';
 
 function Header() {
   return (
     <div className='header'> 
         <Menu></Menu>
         <Logo></Logo>
-        
-        <div className='menu-items'>TV</div>
-        <div className='menu-items'>Movie</div>
-        <div className='menu-items'>Sports</div>
-        <div className='menu-items'>Disney+</div>
+        <ul className='menu-items'>
+          <li className='menu-item'>TV</li>
+          <li className='menu-item'>Movie</li>
+          <li className='menu-item'>Sports</li>
+          <li className='menu-item'>Disney+</li>
+          <li className='menu-item'><img class="brand-logo" src="https://secure-media.hotstarext.com/web-assets/prod/images/brand-logos/disney-hotstar-logo-dark.svg" alt="Disney+&nbsp;Hotstar"/></li>
+        </ul>
+       
         
         <SearchBar></SearchBar>
     </div>

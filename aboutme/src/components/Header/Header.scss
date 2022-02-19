@@ -1,12 +1,24 @@
+@import '../../App.scss';
 .header {
   display: flex;
   background: linear-gradient(to bottom, #192133, #111826);
   justify-content: center;
   text-align: center;
   align-items: center;
-  padding: 14px 16px;
+  padding: 8.5px 16px;
   font-family: 'Roboto', 'HelveticaNeue-Light', sans-serif;
 }
 .menu-items {
-  color: map-get($map: theme, $key: text-primary);
+  list-style: none;
+  display: contents;
+
+  li.menu-item {
+    color: map-get(map-get($theme-1, 'text'), 'L1');
+    font-size: 16px;
+    cursor: pointer;
+    padding: 0px 16px;
+  }
+  li.menu-item:hover {
+    color: map-get(map-get($theme-1, 'text'), 'L0');
+  }
 }

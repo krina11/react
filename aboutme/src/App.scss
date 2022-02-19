@@ -1,15 +1,19 @@
 $theme-1: (
+  'liner-grad': linear-gradient(to bottom, #192133, #111826),
+  'text': (
+    'dark': black,
+    'L0': white,
+    'L1': rgba(255, 255, 255, 0.8),
+  ),
+);
+
+$mat-custom: (
   liner-grad: (
     -225deg,
     #231557 0%,
     #44107a 29%,
     #ff1361 67%,
     #fff800 100%,
-  ),
-  liner-grad: linear-gradient(to bottom, #192133, #111826),
-  $text: (
-    primary: white,
-    dark: black,
   ),
 );
 
