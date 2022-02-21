@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState }  from 'react'
 import SearchBar from '../SearchBar/SearchBar'
 import './Header.scss'
 
@@ -12,6 +12,16 @@ const CSS = {
   backgroundColor: globalvar
 }
 function Header() {
+  const [display, setDisplay] = useState("notdisplayed");
+  const showButton = e => {
+    e.preventDefault();
+    setDisplay("displayed");
+  };
+
+  const hideButton = e => {
+    e.preventDefault();
+    setDisplay("notdisplayed");
+  };
   return (
     <div className='header-wrapper'> 
       <div  className='header'>
@@ -19,13 +29,14 @@ function Header() {
           <Menu></Menu>
           <Logo></Logo>
           <ul className='menu-items'>
-            <li className='menu-item'>TV</li>
+            <li className='menu-item' onMouseEnter={e => showButton(e)} onMouseLeave={e => hideButton(e)}>TV</li>
             <li className='menu-item'>Movie</li>
             <li className='menu-item'>Sports</li>
             <li className='menu-item'>Disney+</li>
             <li className='menu-item'><img  src={logoKids} alt="logoKids"/></li>
           </ul>
         </div>
+        <div className={display}>I might be an invisible button</div>
         <div className='header-right'>
         <div className='header-items'>
           <SearchBar></SearchBar>
