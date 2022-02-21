@@ -9,6 +9,7 @@ interface Props {
   onClick: () => void;
   radius: string
   width: string;
+  customClassName: string;
 }
 
 const Button: React.FC<Props> = ({ 
@@ -19,10 +20,12 @@ const Button: React.FC<Props> = ({
     height,
     onClick, 
     radius,
-    width
+    width,
+    customClassName
   }) => { 
   return (
     <button 
+    className={customClassName}
       onClick={onClick}
       style={{
          backgroundColor: bgcolor,
@@ -30,10 +33,10 @@ const Button: React.FC<Props> = ({
          border,
          borderRadius: radius,
          height,
-         width
+         width,
       }}
     >
-    {children}
+    {children} 
     </button>
   );
 }

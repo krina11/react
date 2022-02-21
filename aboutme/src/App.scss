@@ -1,5 +1,7 @@
 $theme-1: (
-  'liner-grad': linear-gradient(to bottom, #192133, #111826),
+  'liner-grad': (
+    'grad-1': linear-gradient(to bottom, #192133, #111826),
+  ),
   'text': (
     'dark': black,
     'L0': white,

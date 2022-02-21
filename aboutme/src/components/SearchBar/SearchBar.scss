@@ -1,10 +1,37 @@
-.input-open {
-  background: none;
-  border-right: none;
-  outline: none;
+@import '../../App.scss';
+.search-wrapper {
+  padding: 5px;
+  .input-open {
+    background: none;
+    border-right: none;
+    outline: none;
+    color: map-get(map-get($theme-1, 'text'), 'L0');
+    margin: 0 16px;
+    border-width: unset;
+    // border-style: none;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 4px solid -internal-light-dark(rgb(118, 118, 118), rgb(133, 133, 133));
+    border-image: none;
+    animation: ease-in 35s infinite;
+  }
+  .input-open:focus {
+    background: none;
+    border-right: none;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid map-get(map-get($theme-1, 'tray'), 'brand-blue');
+    width: 360px;
+    animation: ease-in 40s;
+  }
 }
-.input-open:focus {
-  background: none;
-  border-right: none;
-  outline: none;
+
+@keyframes ease-in {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+  }
 }
