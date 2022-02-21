@@ -20,7 +20,8 @@ function Slider1() {
         autoplaySpeed: 2000,
         cssEase: "linear",
         nextArrow: <AiOutlineRight />,
-      prevArrow: <AiOutlineLeft />
+      prevArrow: <AiOutlineLeft />,
+      centerMode: true,
       };
 
     
