@@ -36,7 +36,14 @@ function Header() {
             <li className='menu-item'><img  src={logoKids} alt="logoKids"/></li>
           </ul>
         </div>
-        <div className={display} onMouseLeave={e => hideButton(e)}>I might be an invisible button</div>
+        <div className={display} onMouseLeave={e => hideButton(e)}><ul className='sub-menu-items'>
+            <li className='menu-item' onMouseEnter={e => showButton(e)} >TV</li>
+            <li className='menu-item'>Movie</li>
+            <li className='menu-item'>Sports</li>
+            <li className='menu-item'>Disney+</li>
+            <li className='menu-item'><img  src={logoKids} alt="logoKids"/></li>
+          </ul>
+        </div>
         <div className='header-right'>
         <div className='header-items'>
           <SearchBar></SearchBar>
