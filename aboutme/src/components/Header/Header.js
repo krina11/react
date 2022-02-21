@@ -15,15 +15,18 @@ function Header() {
   return (
     <div className='header-wrapper'> 
       <div  className='header'>
-        <Menu></Menu>
-        <Logo></Logo>
-        <ul className='menu-items'>
-          <li className='menu-item'>TV</li>
-          <li className='menu-item'>Movie</li>
-          <li className='menu-item'>Sports</li>
-          <li className='menu-item'>Disney+</li>
-          <li className='menu-item'><img  src={logoKids} alt="logoKids"/></li>
-        </ul>
+        <div className='header-left'>
+          <Menu></Menu>
+          <Logo></Logo>
+          <ul className='menu-items'>
+            <li className='menu-item'>TV</li>
+            <li className='menu-item'>Movie</li>
+            <li className='menu-item'>Sports</li>
+            <li className='menu-item'>Disney+</li>
+            <li className='menu-item'><img  src={logoKids} alt="logoKids"/></li>
+          </ul>
+        </div>
+        <div className='header-right'>
         <div className='header-items'>
           <SearchBar></SearchBar>
          
@@ -53,6 +56,8 @@ function Header() {
           
           
         </div>
+        </div>
+        
       </div>
       
         
