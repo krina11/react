@@ -1,0 +1,104 @@
+.masthead-card {
+  width: 100%;
+  background-color: #030b17;
+  cursor: pointer;
+  height: 100%;
+  position: relative;
+  border-radius: 5px;
+  .image-holder {
+    border-radius: 5px;
+    overflow: hidden;
+    .imageloader {
+      float: right;
+      transform: scale(1.1);
+      width: 720px;
+      height: 400px;
+      img {
+        vertical-align: middle;
+      }
+    }
+    .image-gradient {
+      top: 0;
+      right: 590px;
+      width: 200px;
+      height: inherit;
+      content: '';
+      position: absolute;
+      //   transition: background 0.3s ease-in;
+      background: linear-gradient(to right, #030b17, rgba(0, 0, 0, 0));
+    }
+  }
+  .image-gradient {
+    // right: 594px;
+
+    top: 0;
+    right: 590px;
+    width: 200px;
+    height: inherit;
+    transition: 0.3s ease-in;
+    content: '';
+    position: absolute;
+    background: linear-gradient(to right, #030b17, rgba(0, 0, 0, 0));
+  }
+  .masthead-data {
+    position: absolute;
+    top: 21%;
+    color: black;
+    width: 36%;
+    height: 100%;
+    margin-right: 12px;
+    left: 50px;
+    .container2 {
+      &:before {
+        content: ' ';
+        display: table;
+      }
+      .content-holder {
+        display: inline-block;
+        .title.ellipsize {
+          font-size: 28px;
+          color: #fff;
+          font-weight: 600;
+          height: auto;
+          -webkit-line-clamp: 2;
+          text-align: justify;
+        }
+        .toptitle {
+          font-size: 16px;
+          font-weight: 500;
+          padding-top: 10px;
+          color: rgba(255, 255, 255, 0.6);
+          font-size: 14px;
+          display: flex;
+          vertical-align: bottom;
+          font-weight: 400;
+          .meta-data:not(:last-child):after {
+            content: '';
+            font-family: 'fontawesome-hotstar';
+            font-size: 3px;
+            font-style: normal;
+            text-decoration: none;
+            padding: 6px;
+            vertical-align: middle;
+          }
+        }
+        .description {
+          font-size: 16px;
+          padding-top: 10px;
+          color: rgba(255, 255, 255, 0.6);
+          overflow-wrap: break-word;
+          display: -webkit-box;
+          -webkit-box-orient: vertical;
+          -webkit-line-clamp: 4;
+          overflow: hidden;
+          line-height: 28px;
+          text-align: justify;
+        }
+      }
+    }
+
+    .slider-caption non-subs-caption {
+      position: absolute;
+    }
+  }
+}

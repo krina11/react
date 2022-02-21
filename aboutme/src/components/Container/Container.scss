@@ -1,5 +1,6 @@
 @import '../../App.scss';
 .container {
+  padding-top: 66px;
   min-height: calc(100vh - 66px);
   background-image: map-get(map-get($theme-1, 'liner-grad'), 'grad-1');
   //   &::before {

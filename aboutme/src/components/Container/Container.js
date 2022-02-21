@@ -1,9 +1,11 @@
 import React from 'react'
-import './Container.scss'   
+import './Container.scss'  
+import Slider1 from '../Slider/Slider1'
+
 function Container() {
   return (
     <div className='container'>
-        Container
+        <Slider1/>
     </div>
   )
 }

@@ -4,6 +4,10 @@
   justify-content: space-around;
 }
 .header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1;
   display: flex;
   background: linear-gradient(to bottom, #192133, #111826);
   text-align: center;

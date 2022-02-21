@@ -13,6 +13,12 @@ $theme-1: (
   ),
 );
 
+$font-fam: 'Roboto', 'HelveticaNeue-Light', sans-serif;
+
+.App {
+  font-family: $font-fam;
+}
+
 $mat-custom: (
   liner-grad: (
     -225deg,
