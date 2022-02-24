@@ -1,0 +1,94 @@
+{
+    "mainSlider":[{
+        "img":"https://img1.hotstarext.com/image/upload/f_auto,t_web_m_1x/sources/r1/cms/prod/4469/674469-h",
+        "title":"Avengers: Endgame",
+        "meta-data":["3 hr 1 min","2019","Superhero","U/A 13+"],
+        "description":"After the devastating events of the Infinity War, the Avengers assemble once more to reverse Thanos’ actions and restore balance to the universe.",
+        "cardDirection":"vertical"
+    },{
+        "img":"https://img1.hotstarext.com/image/upload/f_auto,t_web_m_1x/sources/r1/cms/prod/4507/674507-h",
+        "title":"Thor: The Dark World",
+        "meta-data":["1 hr 52 min","2013","Superhero","U/A 13+"],
+        "description":"Thor sets out on a journey to defeat Malekith, the leader of the Dark Elves when he returns to Asgard to fulfil his desire of destroying the Nine Realms.",
+        "cardDirection":"vertical"
+    },{
+        "img":"https://img1.hotstarext.com/image/upload/f_auto,t_web_m_1x/sources/r1/cms/prod/4581/674581-h",
+        "title":"Captain America: The First Avenger",
+        "meta-data":["2 hr 4 min","2011","Superhero","U/A 13+"],
+        "description":"After being injected with a special 'Super-Soldier' serum which leads to him developing superpowers Steve must thwart the plans of a warmonger.",
+        "cardDirection":"vertical"
+    }],
+
+    "otherSlider":[
+        {
+        "category":"Trending Now",
+        "dataList":[{
+            "img":"https://img1.hotstarext.com/image/upload/f_auto,t_web_vl_3x/sources/r1/cms/prod/6182/1116182-v-a4ff74b3d55b",
+            "contentTitle":"A Thursday",
+            "contentSubtitle":"Thriller, Hindi, 2022",
+            "contentDesc":"Naina, a playschool teacher, takes 16 students hostage. Rattling the police and the leaders, her demands",
+            "cardDirection":"vertical"
+        },{
+            "img":"https://img1.hotstarext.com/image/upload/f_auto,t_web_vl_3x/sources/r1/cms/prod/old_images/vertical/MOVIE/4189/1000074189/1000074189-v",
+            "contentTitle":"Drishyam",
+            "contentSubtitle":"Thriller, Hindi, 2015",
+            "contentDesc":"Story of a common family man who takes desperate measures to save his wife and two daughters when they encounter police inspection in case of death a missing person",
+            "cardDirection":"vertical"
+        },{
+           "img":"https://img1.hotstarext.com/image/upload/f_auto,t_web_vl_3x/sources/r1/cms/prod/old_images/vertical/MOVIE/1354/1000001354/1000001354-v" ,
+           "contentTitle":"Bhaag Milkha Bhaag",
+           "contentSubtitle":"Biopic, Hindi, 2013",
+           "contentDesc":"The film chronicles Milkha Singh aka 'The Flying Sikh's,' incredible struggle - from being an orphan to representing country at the olymics",
+           "cardDirection":"vertical"
+        },{
+            "img":"https://img1.hotstarext.com/image/upload/f_auto,t_web_m_1x/sources/r1/cms/prod/4469/674469-h",
+            "contentTitle":"Avengers: Endgame",
+            "contentSubtitle":"Superhero, English ,2019",
+            "contentDesc":"After the devastating events of the Infinity War, the Avengers assemble once more to reverse Thanos’ actions and restore balance to the universe.",
+            "cardDirection":"vertical"
+        },{
+            "img":"https://img1.hotstarext.com/image/upload/f_auto,t_web_m_1x/sources/r1/cms/prod/4507/674507-h",
+            "contentTitle":"Thor: The Dark World",
+            "contentSubtitle":"Superhero, English 2013",
+            "contentDesc":"Thor sets out on a journey to defeat Malekith, the leader of the Dark Elves when he returns to Asgard to fulfil his desire of destroying the Nine Realms.",
+            "cardDirection":"vertical"
+        },{
+            "img":"https://img1.hotstarext.com/image/upload/f_auto,t_web_m_1x/sources/r1/cms/prod/4581/674581-h",
+            "contentTitle":"Captain America: The First Avenger",
+            "contentSubtitle":"Superhero, English 2013",
+            "contentDesc":"After being injected with a special 'Super-Soldier' serum which leads to him developing superpowers Steve must thwart the plans of a warmonger.",
+            "cardDirection":"vertical"
+        }]},{
+        "category":"Recommended For You",
+        "dataList":[{
+            "img":"https://img1.hotstarext.com/image/upload/f_auto,t_web_hs_3x/sources/r1/cms/prod/7652/1117652-h-0db4fd9c3b81",
+            "contentTitle":"Drishyam",
+            "contentSubtitle":"Thriller, Hindi, 2015",
+            "contentDesc":"Story of a common family man who takes desperate measures to save his wife and two daughters when they encounter police inspection in case of death a missing person",
+            "cardDirection":"horizontal"
+        },{
+           "img":"https://img1.hotstarext.com/image/upload/f_auto,t_web_hs_3x/sources/r1/cms/prod/7652/1117652-h-0db4fd9c3b81" ,
+           "contentTitle":"Bhaag Milkha Bhaag",
+           "contentSubtitle":"Biopic, Hindi, 2013",
+           "contentDesc":"The film chronicles Milkha Singh aka 'The Flying Sikh's,' incredible struggle - from being an orphan to representing country at the olymics",
+           "cardDirection":"horizontal"
+        },{
+            "img":"https://img1.hotstarext.com/image/upload/f_auto,t_web_hs_3x/sources/r1/cms/prod/7652/1117652-h-0db4fd9c3b81",
+            "contentTitle":"Drishyam",
+            "contentSubtitle":"Thriller, Hindi, 2015",
+            "contentDesc":"Story of a common family man who takes desperate measures to save his wife and two daughters when they encounter police inspection in case of death a missing person",
+            "cardDirection":"horizontal"
+        },{
+           "img":"https://img1.hotstarext.com/image/upload/f_auto,t_web_hs_3x/sources/r1/cms/prod/7652/1117652-h-0db4fd9c3b81" ,
+           "contentTitle":"Bhaag Milkha Bhaag",
+           "contentSubtitle":"Biopic, Hindi, 2013",
+           "contentDesc":"The film chronicles Milkha Singh aka 'The Flying Sikh's,' incredible struggle - from being an orphan to representing country at the olymics",
+           "cardDirection":"horizontal"
+        }
+    ]}
+        
+        
+    
+        
+    ]
+}

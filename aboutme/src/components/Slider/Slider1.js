@@ -6,7 +6,8 @@ import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 import { AiOutlineRight } from 'react-icons/ai'
 import { AiOutlineLeft } from 'react-icons/ai'
-
+const data = require('.././../data/dummy_data.json');
+console.log(data);
 function Slider1() {
     var settings = {
         // dots: true,
@@ -24,116 +25,43 @@ function Slider1() {
       centerMode: true,
       };
 
-    
+   
   return (
     <Slider {...settings}>
-    <div>
-        <div class="masthead-card">
-            <div class="image-holder">
-                <div class="imageloader loaded">
-                    <img src="https://img1.hotstarext.com/image/upload/f_auto,t_web_m_1x/sources/r1/cms/prod/old_images/MOVIE/4296/1000194296/1000194296-h" alt="Baadshaho" class=""/></div>
-                    <div class="container2"></div>
+    
+       {data.mainSlider.map(mainSlide=>{
+       return(
+        <div>
+        <div className="masthead-card">
+            <div className="image-holder">
+                <div className="imageloader loaded">
+                    <img src={mainSlide.img} alt={mainSlide.title} className=""/></div>
+                    <div className="container2"></div>
                 </div>
-                <div class="image-gradient"></div>
-                <div class="masthead-data">
-                    <div class="container2"></div>
-                    <div class="masthead-badge">  </div>
-                    <div class="slider-caption non-subs-caption">
-                        <div class="container2"><div class="content-holder">
-                            <div class="title ellipsize">Baadshaho</div>
-                            <div class="toptitle">
-                                <span class="meta-data">Hindi</span>
-                                <span class="meta-data">Drama</span>
-                                <span class="meta-data">2017</span>
+                <div className="image-gradient"></div>
+                <div className="masthead-data">
+                    <div className="container2"></div>
+                    <div className="masthead-badge">  </div>
+                    <div className="slider-caption non-subs-caption">
+                        <div className="container2"><div className="content-holder">
+                            <div className="title ellipsize">{mainSlide.title}</div>
+                            <div className="toptitle">
+                            {mainSlide['meta-data'].map(meta=>{
+                              return(  <span className="meta-data">{meta}</span>)
+                            })}
+        
                             </div>
-                            <div class="description"> An Indian queen seeks her bodyguard's help to seize the gold, which the government had raided from her palace during the Emergency in 1975. 
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div>
-    <div class="masthead-card">
-            <div class="image-holder">
-                <div class="imageloader loaded">
-                    <img src="https://img1.hotstarext.com/image/upload/f_auto,t_web_m_1x/sources/r1/cms/prod/3594/753594-h" alt="Special Ops" class=""/></div>
-                    <div class="container2"></div>
-                </div>
-                <div class="image-gradient"></div>
-                <div class="masthead-data">
-                    <div class="container2"></div>
-                    <div class="masthead-badge">  </div>
-                    <div class="slider-caption non-subs-caption">
-                        <div class="container2"><div class="content-holder">
-                            <div class="title ellipsize">Special Ops</div>
-                            <div class="toptitle">
-                                <span class="meta-data">Hotstar Specials</span>
-                                <span class="meta-data">Action</span>
-                                <span class="meta-data">2020</span>
-                            </div>
-                            <div class="description">One is a relentless hero, the other is a terror mastermind. In a race against time, Himmat Singh and his team are on a mission to end a nineteen-year long manhunt.</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div>
-        <div class="masthead-card">
-            <div class="image-holder">
-                <div class="imageloader loaded">
-                    <img src="https://img1.hotstarext.com/image/upload/f_auto,t_web_m_1x/sources/r1/cms/prod/old_images/MOVIE/4296/1000194296/1000194296-h" alt="Baadshaho" class=""/></div>
-                    <div class="container2"></div>
-                </div>
-                <div class="image-gradient"></div>
-                <div class="masthead-data">
-                    <div class="container2"></div>
-                    <div class="masthead-badge">  </div>
-                    <div class="slider-caption non-subs-caption">
-                        <div class="container2"><div class="content-holder">
-                            <div class="title ellipsize">Baadshaho</div>
-                            <div class="toptitle">
-                                <span class="meta-data">Hindi</span>
-                                <span class="meta-data">Drama</span>
-                                <span class="meta-data">2017</span>
-                            </div>
-                            <div class="description"> An Indian queen seeks her bodyguard's help to seize the gold, which the government had raided from her palace during the Emergency in 1975. 
+                            <div className="description"> {mainSlide.description}
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-    <div>
-    <div class="masthead-card">
-            <div class="image-holder">
-                <div class="imageloader loaded">
-                    <img src="https://img1.hotstarext.com/image/upload/f_auto,t_web_m_1x/sources/r1/cms/prod/3594/753594-h" alt="Special Ops" class=""/></div>
-                    <div class="container2"></div>
-                </div>
-                <div class="image-gradient"></div>
-                <div class="masthead-data">
-                    <div class="container2"></div>
-                    <div class="masthead-badge">  </div>
-                    <div class="slider-caption non-subs-caption">
-                        <div class="container2"><div class="content-holder">
-                            <div class="title ellipsize">Special Ops</div>
-                            <div class="toptitle">
-                                <span class="meta-data">Hotstar Specials</span>
-                                <span class="meta-data">Action</span>
-                                <span class="meta-data">2020</span>
-                            </div>
-                            <div class="description">One is a relentless hero, the other is a terror mastermind. In a race against time, Himmat Singh and his team are on a mission to end a nineteen-year long manhunt.</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
         </div>
-    </div>
-   
+       )
+   }) } 
+    
   </Slider>
   )
 }

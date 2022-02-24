@@ -7,9 +7,18 @@ import Slider from "react-slick";
 import { AiOutlineRight } from 'react-icons/ai';
 import { AiOutlineLeft } from 'react-icons/ai';
 import CardMini from "../CardMini/CardMini";
+
+interface OtherSlider {
+  img:string,
+  contentTitle:string,
+  contentSubtitle:string,
+  contentDesc:string,
+  cardDirection:string
+}
 interface Props {
   category: string,
   children?: React.ReactNode;
+  data:Array<OtherSlider>;
   onClick: () => void; 
   customClassName: string;
 }
@@ -24,14 +33,13 @@ var settings = {
     swipeToSlide: true,
     cssEase: "linear",
     nextArrow: <AiOutlineRight />,
-    prevArrow: <AiOutlineLeft />,
-  
- 
+    prevArrow: <AiOutlineLeft />, 
   };
 
 const Slider2: React.FC<Props> = ({ 
     category,
     children,
+    data,
     onClick, 
     customClassName
     
@@ -47,15 +55,9 @@ const Slider2: React.FC<Props> = ({
             </h2>
             </div>
             <Slider  {...settings}>
-                <CardMini contentTitle="contentTitle" contentSubtitle="contentSubtitle"  contentDesc="contentDesc"></CardMini>    
-                <CardMini contentTitle="contentTitle" contentSubtitle="contentSubtitle"  contentDesc="contentDesc"></CardMini>        
-                <CardMini contentTitle="contentTitle" contentSubtitle="contentSubtitle"  contentDesc="contentDesc"></CardMini> 
-                <CardMini contentTitle="contentTitle" contentSubtitle="contentSubtitle"  contentDesc="contentDesc"></CardMini> 
-                <CardMini contentTitle="contentTitle" contentSubtitle="contentSubtitle"  contentDesc="contentDesc"></CardMini> 
-                <CardMini contentTitle="contentTitle" contentSubtitle="contentSubtitle"  contentDesc="contentDesc"></CardMini> 
-                <CardMini contentTitle="contentTitle" contentSubtitle="contentSubtitle"  contentDesc="contentDesc"></CardMini> 
-                <CardMini contentTitle="contentTitle" contentSubtitle="contentSubtitle"  contentDesc="contentDesc"></CardMini> 
-                <CardMini contentTitle="contentTitle" contentSubtitle="contentSubtitle"  contentDesc="contentDesc"></CardMini> 
+              {data.map(item=>{
+                return(<CardMini className={item.cardDirection} img={item.img} contentTitle={item.contentTitle} contentSubtitle={item.contentSubtitle}  contentDesc={item.contentDesc} ></CardMini>)
+              })}
             </Slider>
             </div>
             </div>

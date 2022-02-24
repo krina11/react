@@ -14,6 +14,7 @@
 }
 #slideSec .slick-slide img {
   display: block;
+  object-fit: fill;
   //   height: 212px;
   //   width: 160px;
 }
@@ -24,7 +25,7 @@
 .vertical {
   //   height: 212px;
   //   width: 160px;
-  background: var(--BG_COLOR_L1);
+  background: none;
   overflow: hidden;
   position: relative;
   -webkit-transform: translate3d(0, 0, 0);
@@ -42,6 +43,7 @@
 
     .details {
       opacity: 1;
+      left: -18px;
       font-size: calc(11px / 1.3);
       width: 100%;
       text-align: center;
@@ -53,9 +55,6 @@
 
   .thumbnail-container {
     position: relative;
-    // margin: 12px;
-    // height: 212px;
-    // width: 160px;
     .card-img-container {
       position: relative;
       img {
@@ -68,7 +67,10 @@
   }
 
   .details {
+    max-width: 160px;
     bottom: 0;
+    left: 5px;
+    text-align: center;
     opacity: 0;
     color: white;
     font-size: calc(11px / 1.3);
@@ -87,6 +89,7 @@
       padding-right: 0;
       margin-bottom: 2px;
       line-height: normal;
+      font-weight: 700;
     }
     .ellipsize {
       text-overflow: ellipsis;
@@ -96,25 +99,182 @@
       -webkit-box-orient: vertical;
       -webkit-line-clamp: 2;
       white-space: normal;
+      padding: 20px;
+      height: 8px;
     }
   }
 }
-// article.show-card .details {
-//   padding: 30px 10px 7px 5px;
-// }
+.horizontal {
+  // width: 210px;
+  background: none;
+  overflow: hidden;
+  position: relative;
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  border-radius: 5px;
+  transition: transform 0.25s cubic-bezier(0.33, 0.04, 0.63, 0.93),
+    -webkit-transform 0.25s cubic-bezier(0.33, 0.04, 0.63, 0.93),
+    -o-transform 0.25s cubic-bezier(0.33, 0.04, 0.63, 0.93);
 
-// article.show-card .ellipsise {
-//   display: block;
-// }
-// article .sub-info {
-//   font-size: 8px;
-//   padding: 0 5px;
-//   margin-bottom: 2px;
-//   line-height: 1.4;
-// }
-// article .action {
-//   padding: 0 0 0 2.5px;
-//   border-radius: 2px;
-//   white-space: nowrap;
-//   opacity: 0.8;
-// }
+  .meta-desc {
+    display: flex;
+    justify-content: start;
+    justify-content: left;
+    position: absolute;
+    bottom: 0;
+    padding: 15px 12px 20px 12px;
+    font-size: 14px;
+    color: #fff;
+    line-height: normal;
+    width: 100%;
+    .meta-wrapper {
+      margin-right: 0;
+      z-index: 1;
+      margin: auto 10px;
+      .title {
+        margin: auto;
+      }
+    }
+  }
+  article .play-icon {
+    background-color: none;
+    -webkit-transition: background-color 0.2s
+      cubic-bezier(0.33, 0.04, 0.63, 0.93);
+    -o-transition: background-color 0.2s cubic-bezier(0.33, 0.04, 0.63, 0.93);
+    transition: background-color 0.2s cubic-bezier(0.33, 0.04, 0.63, 0.93);
+    background: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMCIgaGVpZ2h0PSIxMiIgdmlld0JveD0iMCAwIDIwIDI0Ij4KICAgIDxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+CiAgICAgICAgPHBhdGggZD0iTS00IDBoMjR2MjRILTR6Ii8+CiAgICAgICAgPHBhdGggZmlsbD0iI0ZGRiIgeDI9IjUwJSIgeTI9IjQwJSIgZD0iTTAgMjEuMDdjMCAyLjIwOSAxLjUzNSAzLjA1OSAzLjQwNiAxLjkxM2wxNC41MzctOC44OTdjMS44ODEtMS4xNTIgMS44NzEtMy4wMjUgMC00LjE3bC0xNC41MzctOC45QzEuNTI2LS4xMzMgMCAuNzI5IDAgMi45M3YxOC4xNHoiIG9wYWNpdHk9IjEiLz4KICAgIDwvZz4KPC9zdmc+Cg==)
+      no-repeat center center;
+    height: 20px;
+    // width: 22px;
+    // background-position: 8px 4px;
+    margin-left: 16px;
+    padding: 8px;
+    margin-right: 6px;
+    z-index: 1;
+  }
+  article.clip-card .meta-desc,
+  article.clip-card .meta-center-desc {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  article .meta-wrapper {
+    margin-right: 0;
+    z-index: 1;
+  }
+  article .content-play {
+    display: flex;
+    text-align: center;
+    .content-title {
+      margin: auto 0px;
+      align-content: center;
+      justify-content: initial;
+      display: flex;
+      justify-content: center;
+    }
+  }
+  article.normal .meta-desc .title,
+  article.normal .meta-center-desc .title {
+    font-size: 14px;
+  }
+  &:hover {
+    transform: scale3d(1.2, 1.2, 1) perspective(500px);
+    z-index: 1;
+    .meta-desc {
+      opacity: 0;
+    }
+
+    .details {
+      opacity: 1;
+      left: 12px;
+      font-size: calc(11px / 1.3);
+
+      text-align: center;
+    }
+  }
+
+  article .details .content-title {
+    font-size: 10px;
+    padding: 0 5px;
+    display: inline-block;
+    opacity: 1;
+  }
+  article .details .content-play .content-title {
+    padding: 0 2px;
+  }
+  .dot-divider {
+    padding: 0 3px 0 3px;
+  }
+  article .details .content-play .subtitle {
+    padding: 0 2px;
+  }
+  article .details .description {
+    font-size: 8px;
+    margin-bottom: 2px;
+    padding-left: 5px;
+    opacity: 0.8;
+  }
+  article .action {
+    padding: 0 0 0 2.5px;
+    border-radius: 2px;
+    white-space: nowrap;
+    opacity: 0.8;
+  }
+  .thumbnail-container {
+    position: relative;
+    // margin: 12px;
+    // height: 212px;
+    // width: 160px;
+    .card-img-container {
+      position: relative;
+      img {
+        width: 215px;
+        height: 122px;
+        margin: 12px;
+        border-radius: 5px;
+      }
+    }
+  }
+  .details {
+    max-width: 202px;
+    bottom: 0;
+    left: 12px;
+    text-align: center;
+    opacity: 0;
+    color: white;
+    font-size: calc(11px / 1.3);
+    padding: 30px 14px 15px 14px;
+    position: absolute;
+    width: 100%;
+    transition: opacity 0.25s ease-in,
+      bottom 0.25s cubic-bezier(0.33, 0.04, 0.63, 0.93);
+    background-image: linear-gradient(
+      to bottom,
+      rgba(4, 8, 15, 0),
+      #192133,
+      #334366
+    );
+    .content-title {
+      padding-right: 0;
+      margin-bottom: 2px;
+      line-height: normal;
+      font-weight: 700;
+      opacity: 1;
+    }
+    .ellipsize {
+      width: 176px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .action {
+      .add-to-watchlist {
+        text-align: start;
+        padding-left: 3px;
+      }
+    }
+  }
+}
